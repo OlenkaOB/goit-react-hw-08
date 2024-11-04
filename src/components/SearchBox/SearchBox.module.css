@@ -1,0 +1,33 @@
+.labelSearch {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    gap: 10px;
+}
+
+.spanSearch {
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    text-align: left;
+}
+
+.inputSearch {
+    border: 1px solid #8d8a8a;
+    border-radius: 4px;
+    width: 350px;
+    height: 40px;
+    background-color: transparent;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    padding-left: 16px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    color: #ffffff;
+}

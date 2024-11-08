@@ -1,7 +1,6 @@
 .ContactForm {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     gap: 25px;
     width: 350px;
     height: 300px;

@@ -1,10 +1,17 @@
 import s from './ContactList.module.css';
 import Contact from '../Contact/Contact';
+import '../../assets/contacts.json';
 
-const ContactList = () => {
+const ContactList = ({ contacts = [], deleteContact }) => {
   return (
     <>
-      <Contact />
+      <ul className={s.list}>
+        {contacts.map(contact => (
+          <li className={s.listItem} key={contact.id}>
+            <Contact contact={contact} deleteContact={deleteContact} />
+          </li>
+        ))}
+      </ul>
     </>
   );
 };

@@ -2,9 +2,9 @@
     display: flex;
     row-gap: 2px;
     justify-content: space-between;
-    column-gap: 120px;
     align-items: center;
     border-radius: 5px;
+    width: 360px;
 
 }
 
@@ -26,9 +26,13 @@ p {
 button {
     width: 80px;
     height: 40px;
-    font-weight: 600;
-    border: 1px solid grey;
+    font-size: 18px;
+    font-weight: 500;
+    border: 2px solid rgb(13, 13, 14);
     cursor: pointer;
+    border-color: rgb(133, 130, 130);
+    background-color: rgb(235, 235, 232);
+    color: rgb(54, 52, 52);
     padding: 5px;
     border-radius: 5px;
     justify-content: center;
@@ -37,5 +41,5 @@ button {
 }
 
 button:active {
-    background-color: lightgray;
+    background-color: rgb(160, 159, 165);
 }

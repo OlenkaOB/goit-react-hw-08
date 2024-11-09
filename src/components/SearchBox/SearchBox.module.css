@@ -1,5 +1,6 @@
 .container {
     padding-top: 15px;
+
 }
 
 .labelSearch {
@@ -10,9 +11,9 @@
 
 
 .inputSearch {
-    border: 1px solid #030303;
+    border: 2px solid #030303;
     border-radius: 4px;
-    width: 380px;
+    width: 390px;
     height: 40px;
     font-size: 15px;
     line-height: 2;

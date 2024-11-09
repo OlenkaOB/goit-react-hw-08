@@ -10,8 +10,8 @@ function App() {
     () => JSON.parse(localStorage.getItem('saved-contact')) ?? initialContacts
   );
   const [search, setSearch] = useState('');
-  useEffect;
-  () => localStorage.setItem('saved-contact', JSON.stringify(contacts), [contacts]);
+
+  useEffect(() => localStorage.setItem('saved-contact', JSON.stringify(contacts)), [contacts]);
 
   const addContact = newContact => {
     setContacts(prev => [...prev, newContact]);

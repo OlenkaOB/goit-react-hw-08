@@ -6,15 +6,17 @@ const Contact = ({ contact, deleteContact }) => {
   const { name, number, id } = contact;
   return (
     <>
-      <div className={s.wrapper}>
-        <p>
-          <FaUser />
-          {name}
-        </p>
-        <p>
-          <FaPhoneAlt />
-          {number}
-        </p>
+      <div className={s.container}>
+        <div className={s.wrapper}>
+          <p>
+            <FaUser />
+            {name}
+          </p>
+          <p>
+            <FaPhoneAlt />
+            {number}
+          </p>
+        </div>
         <button type="button" onClick={() => deleteContact(id)}>
           Delete
         </button>

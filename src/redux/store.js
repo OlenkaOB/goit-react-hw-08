@@ -10,15 +10,9 @@ const persistConfig = {
     version: 1,
     storage,
 };
-const persistConfigContacts = {
-    key: 'name',
-    version: 1,
-    storage,
-    blacklist: ['filter'],
-};
 
 
-const persistedContactsReducer = persistReducer(persistConfigContacts, contactReducer);
+const persistedContactsReducer = persistReducer(persistConfig, contactReducer);
 
 export const store = configureStore({
     reducer: {

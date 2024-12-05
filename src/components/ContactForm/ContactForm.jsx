@@ -3,17 +3,18 @@ import s from './ContactForm.module.css';
 import { nanoid } from 'nanoid';
 import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
-import { addContact } from '../../redux/contactsSlice';
+import { addContact } from '../../redux/contactsOps';
 
 const ContactForm = () => {
   const dispatch = useDispatch();
- 
 
   const handleSubmit = (values, actions) => {
-    dispatch(addContact({
-      ...values,
-      id: nanoid(),
-    }));
+    dispatch(
+      addContact({
+        ...values,
+        id: nanoid(),
+      })
+    );
     actions.resetForm();
   };
 
@@ -29,12 +30,12 @@ const ContactForm = () => {
       validationSchema={contactFormSchema}
     >
       <Form className={s.ContactForm}>
-        <label className={s.labelForm} >
+        <label className={s.labelForm}>
           <span className={s.spanForm}>Name</span>
           <Field className={s.inputForm} type="text" name="name" />
           <ErrorMessage className={s.error} name="name" component="span" />
         </label>
-        <label className={s.labelForm} >
+        <label className={s.labelForm}>
           <span className={s.spanForm}>Number</span>
           <Field className={s.inputForm} type="text" name="number" />
           <ErrorMessage className={s.error} name="number" component="span" />

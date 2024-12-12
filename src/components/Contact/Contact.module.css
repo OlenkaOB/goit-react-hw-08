@@ -5,6 +5,9 @@
     align-items: center;
     border-radius: 5px;
     width: 360px;
+    border-color: aliceblue;
+
+
 
 }
 
@@ -19,6 +22,7 @@ p {
     align-items: center;
     padding-left: 15px;
     column-gap: 6px;
+    color: aliceblue;
 }
 
 
@@ -42,4 +46,10 @@ button {
 
 button:active {
     background-color: rgb(160, 159, 165);
+}
+
+button:hover {
+    background-color: #3396d8;
+    transition: 0.7s;
+    box-shadow: 0 0 0 4px #1da6f5;
 }

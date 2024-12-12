@@ -4,6 +4,7 @@ import ContactList from '../../components/ContactList/ContactList';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchContacts } from '../../redux/contacts/operations';
+import s from './ContactsPage.module.css';
 
 const ContactsPage = () => {
   const dispatch = useDispatch();
@@ -11,7 +12,7 @@ const ContactsPage = () => {
     dispatch(fetchContacts());
   }, [dispatch]);
   return (
-    <div>
+    <div className={s.contactsDiv}>
       <h1>Phonebook</h1>
       <ContactForm />
       <SearchBox />

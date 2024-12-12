@@ -19,8 +19,8 @@ const ContactForm = () => {
   };
 
   const contactFormSchema = Yup.object().shape({
-    name: Yup.string().min(3, 'Too Short!').max(50, 'Too Long!').required('Required'),
-    number: Yup.string().min(9, 'Invalid phone number format').required('Required'),
+    name: Yup.string().min(3, 'Too Short!').required('Please, enter name'),
+    number: Yup.string().min(9, 'Invalid phone number format').required('Please, enter number'),
   });
 
   return (

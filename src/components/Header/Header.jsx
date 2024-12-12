@@ -21,11 +21,9 @@ const Header = () => {
           Home
         </NavLink>
         <NavLink className={buildLinkClass} to="/contacts">
-          Contakts
+          Contacts
         </NavLink>
-        {/* <NavLink className={buildLinkClass} to="/login">
-          LogIn
-        </NavLink> */}
+
         {!isLoggedId && (
           <>
             <NavLink className={buildLinkClass} to="/login">

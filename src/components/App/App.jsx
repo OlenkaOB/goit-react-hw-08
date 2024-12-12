@@ -2,22 +2,22 @@ import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchContacts } from '../../redux/contacts/operations';
 import Layout from '../../components/Layout';
-import HomePage from '../../pages/HomePages/HomePage';
+import HomePages from '../../pages/HomePages/HomePages';
 import ContactsPage from '../../pages/ContactsPage/ContactsPage';
 import RegistrationPage from '../../pages/RegistrationPage/RegistrationPage';
 import LoginPage from '../../pages/LoginPage/LoginPage';
 import { selectIsRefreshing } from '../../redux/auth/selectors';
 import PrivateRoute from '../PrivateRoute';
 import Loader from '../Loader/Loader';
+import { refreshUser } from '../../redux/auth/operations';
 
 function App() {
   const dispatch = useDispatch();
   const isRefreshing = useSelector(selectIsRefreshing);
 
   useEffect(() => {
-    dispatch(fetchContacts());
+    dispatch(refreshUser());
   }, [dispatch]);
   return isRefreshing ? (
     <Loader />
@@ -25,7 +25,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<HomePage />} />
+          <Route index element={<HomePages />} />
           <Route
             path="/contacts"
             element={

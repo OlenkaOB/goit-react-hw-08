@@ -1,7 +1,7 @@
 import s from './Header.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import { selectIsLoggedId, selectUser } from '../../redux/auth/selectors';
+import { selectIsLoggedIn, selectUser } from '../../redux/auth/selectors';
 import { logout } from '../../redux/auth/operations';
 import clsx from 'clsx';
 
@@ -10,7 +10,7 @@ const buildLinkClass = ({ isActive }) => {
 };
 
 const Header = () => {
-  const isLoggedId = useSelector(selectIsLoggedId);
+  const isLoggedId = useSelector(selectIsLoggedIn);
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
   return (

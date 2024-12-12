@@ -56,7 +56,7 @@ export const refreshUser = createAsyncThunk('auth/refresh', async (_, thunkAPI) 
     }
     try {
         setAuthHeader(savedToken);
-        const { data } = await taskAPI.get('users/me');
+        const { data } = await taskAPI.get('users/current');
         return data;
 
     } catch (error) {

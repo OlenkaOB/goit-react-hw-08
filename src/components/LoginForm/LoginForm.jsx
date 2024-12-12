@@ -1,11 +1,11 @@
 import { Field, Form, Formik } from 'formik';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectIsLoggedId } from '../../redux/auth/selectors';
+import { selectIsLoggedIn } from '../../redux/auth/selectors';
 import { login } from '../../redux/auth/operations';
 import { Navigate } from 'react-router-dom';
 
 const LoginForm = () => {
-  const isLoggedId = useSelector(selectIsLoggedId);
+  const isLoggedId = useSelector(selectIsLoggedIn);
   const dispatch = useDispatch();
 
   const handleSubmit = (values, options) => {

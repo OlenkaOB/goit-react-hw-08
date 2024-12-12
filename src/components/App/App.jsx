@@ -6,7 +6,6 @@ import { fetchContacts } from '../../redux/contacts/operations';
 import Layout from '../../components/Layout';
 import HomePage from '../../pages/HomePages/HomePage';
 import ContactsPage from '../../pages/ContactsPage/ContactsPage';
-// import NotFaundPage from '../../pages/NotFaundPage';
 import RegistrationPage from '../../pages/RegistrationPage/RegistrationPage';
 import LoginPage from '../../pages/LoginPage/LoginPage';
 import { selectIsRefreshing } from '../../redux/auth/selectors';
@@ -39,7 +38,6 @@ function App() {
         <Route>
           <Route path="/register" element={<RegistrationPage />} />
           <Route path="/login" element={<LoginPage />} />
-          {/* <Route path="*" element={<NotFaundPage />} /> */}
         </Route>
       </Routes>
     </>

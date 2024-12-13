@@ -1,17 +1,26 @@
 .homeDiv {
     display: flex;
     justify-content: center;
-    max-width: 100%;
     padding-top: 120px;
+    flex-direction: column;
 }
 
 .title {
     text-align: center;
-    font-size: 1500;
+    font-size: 25px;
     font-weight: 700;
-    row-gap: 10px;
+
 }
 
 .title svg {
     color: rgb(253, 251, 251);
+}
+
+.list {
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    justify-content: center;
+    padding: 0;
 }

@@ -8,6 +8,7 @@ const HomePages = () => {
         Welcome contacts page
         <PiHeartLight />
       </h2>
+      <p className={s.list}>If you want to continue working, please log in!</p>
     </div>
   );
 };

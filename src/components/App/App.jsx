@@ -11,6 +11,7 @@ import { selectIsRefreshing } from '../../redux/auth/selectors';
 import PrivateRoute from '../PrivateRoute';
 import Loader from '../Loader/Loader';
 import { refreshUser } from '../../redux/auth/operations';
+import RestrictedRoute from '../RestrictedRoute';
 
 function App() {
   const dispatch = useDispatch();
@@ -36,8 +37,22 @@ function App() {
           />
         </Route>
         <Route>
-          <Route path="/register" element={<RegistrationPage />} />
-          <Route path="/login" element={<LoginPage />} />
+          <Route
+            path="/register"
+            element={
+              <RestrictedRoute redirectTo="/contacts">
+                <RegistrationPage />
+              </RestrictedRoute>
+            }
+          />
+          <Route
+            path="/login"
+            element={
+              <RestrictedRoute redirectTo="/contacts">
+                <LoginPage />
+              </RestrictedRoute>
+            }
+          />
         </Route>
       </Routes>
     </>

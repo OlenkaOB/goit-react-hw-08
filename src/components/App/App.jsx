@@ -12,6 +12,7 @@ import PrivateRoute from '../PrivateRoute';
 import Loader from '../Loader/Loader';
 import { refreshUser } from '../../redux/auth/operations';
 import RestrictedRoute from '../RestrictedRoute';
+import NotFoundPage from '../../pages/NotFoundPage/NotFoundPage';
 
 function App() {
   const dispatch = useDispatch();
@@ -54,6 +55,7 @@ function App() {
             }
           />
         </Route>
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </>
   );
